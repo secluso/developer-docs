@@ -1,2 +1,22 @@
 site_name: Secluso Developer Docs
 theme: readthedocs
+nav:
+  - Home: index.md
+  - Contributing: contributing.md
+  - Structure (Repos):
+      - Core: structure/core.md
+      - Mobile App: structure/mobile_app.md
+      - OS: structure/os.md
+      - TUF: structure/tuf.md
+      - Rpicam Apps Fork: structure/rpicam_apps_fork.md
+  - Logic:
+      - Pairing: logic/pairing.md
+      - MLS: logic/mls.md
+      - Reproducible Builds: logic/reproducible_builds.md
+      - TUF Updates: logic/tuf_updates.md
+      - Reset, Toggle, IR: logic/reset_toggle_ir.md
+      - Bluetooth: logic/bluetooth.md
+      - Motion + Object Detection: logic/detection.md
+      - Notifications: logic/notifications.md
+  - Hardware:
+      - Pi Zero 2W: hardware/pi_zero_2w.md
