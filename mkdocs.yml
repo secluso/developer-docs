@@ -5,7 +5,9 @@ nav:
   - Contributing: contributing.md
   - Structure (Repos):
       - core: structure/core.md
-      - mobile_client: structure/mobile_app.md
+      - mobile_client:
+          - Building: structure/mobile_client/building.md
+          - Structure: structure/mobile_client/structure.md
       - os: structure/os.md
       - tuf-updater: structure/tuf.md
       - rpicam_apps_fork: structure/rpicam_apps_fork.md
