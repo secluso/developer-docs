@@ -14,7 +14,9 @@ nav:
   - Logic:
       - Reproducible Builds: logic/reproducible_builds.md
       - Reset, Toggle, IR: logic/reset_toggle_ir.md
-      - MLS (E2EE): logic/mls.md
+      - MLS (E2EE):
+        - General: logic/mls/general.md
+        - Technical: logic/mls/technical.md
       - Motion + Object Detection: logic/detection.md
       - Notifications: logic/notifications.md
       - Pairing:
