@@ -4,19 +4,25 @@ nav:
   - Home: index.md
   - Contributing: contributing.md
   - Structure (Repos):
-      - Core: structure/core.md
-      - Mobile App: structure/mobile_app.md
-      - OS: structure/os.md
-      - TUF: structure/tuf.md
-      - Rpicam Apps Fork: structure/rpicam_apps_fork.md
+      - core: structure/core.md
+      - mobile_client: structure/mobile_app.md
+      - os: structure/os.md
+      - tuf-updater: structure/tuf.md
+      - rpicam_apps_fork: structure/rpicam_apps_fork.md
   - Logic:
-      - Pairing: logic/pairing.md
-      - MLS: logic/mls.md
       - Reproducible Builds: logic/reproducible_builds.md
-      - TUF Updates: logic/tuf_updates.md
       - Reset, Toggle, IR: logic/reset_toggle_ir.md
-      - Bluetooth: logic/bluetooth.md
+      - MLS (E2EE): logic/mls.md
       - Motion + Object Detection: logic/detection.md
       - Notifications: logic/notifications.md
+      - Pairing:
+        - General Logic: logic/pairing.md
+        - Bluetooth: logic/bluetooth.md
+      - Testing: logic/testing.md
+      - Updates:
+        - Ethereum Attestation Service: logic/eas.md
+        - The Update Framework (TUF): logic/tuf_updates.md
   - Hardware:
-      - Pi Zero 2W: hardware/pi_zero_2w.md
+      - Raspberry Pi:
+          - Pi Zero 2W: hardware/pi_zero_2w.md
+          - Pi Zero W: hardware/pi_zero_w.md
