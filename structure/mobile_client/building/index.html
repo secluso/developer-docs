@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>Building - Secluso Developer Docs</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Building";
+        var mkdocs_page_input_path = "structure/mobile_client/building.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../.." class="icon icon-home"> Secluso Developer Docs
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../contributing/">Contributing</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Structure (Repos)</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../../core/">core</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" >mobile_client</a>
+    <ul class="current">
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">Building</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#1-reference-documentation">1. Reference Documentation</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#2-prerequisites">2. Prerequisites</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#3-project-setup-step-by-step">3. Project Setup (Step-by-Step)</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#31-clone-the-repository">3.1 Clone the Repository</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#32-open-the-project-in-visual-studio-code">3.2 Open the Project in Visual Studio Code</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#33-install-flutter-packages">3.3 Install Flutter Packages</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#4-compile-rust-code-for-android">4. Compile Rust Code for Android</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#5-run-on-a-physical-android-device">5. Run on a Physical Android Device</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#6-debugging-tips">6. Debugging Tips</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../structure/">Structure</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../os/">os</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tuf/">tuf-updater</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../rpicam_apps_fork/">rpicam_apps_fork</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Logic</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../logic/reproducible_builds/">Reproducible Builds</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../logic/reset_toggle_ir/">Reset, Toggle, IR</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../logic/mls/">MLS (E2EE)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../logic/detection/">Motion + Object Detection</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../logic/notifications/">Notifications</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Pairing</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../logic/pairing/">General Logic</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../logic/bluetooth/">Bluetooth</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../logic/testing/">Testing</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Updates</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../logic/eas/">Ethereum Attestation Service</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../logic/tuf_updates/">The Update Framework (TUF)</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Hardware</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" >Raspberry Pi</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../hardware/pi_zero_2w/">Pi Zero 2W</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../hardware/pi_zero_w/">Pi Zero W</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">Secluso Developer Docs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Structure (Repos)</li>
+          <li class="breadcrumb-item">mobile_client</li>
+      <li class="breadcrumb-item active">Building</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="mobile_client-repository">mobile_client repository</h1>
+<p>Links for published apps: <a href="https://apps.apple.com/us/app/secluso/id6756543429">iOS Mobile App</a>, <a href="https://play.google.com/store/apps/details?id=com.secluso.mobile">Android Mobile App</a></p>
+<hr />
+<h2 id="1-reference-documentation">1. Reference Documentation</h2>
+<ul>
+<li><strong>Flutter Docs:</strong> <a href="https://docs.flutter.dev/">flutter.dev</a></li>
+<li><strong>Firebase Setup for Flutter:</strong> <a href="https://firebase.google.com/docs/flutter/setup?platform=ios">firebase.google.com/docs/flutter/setup</a></li>
+</ul>
+<hr />
+<h2 id="2-prerequisites">2. Prerequisites</h2>
+<p>Make sure the following tools are installed:</p>
+<table>
+<thead>
+<tr>
+<th>Tool</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Flutter SDK (3.x or later)</td>
+<td>Cross-platform mobile framework</td>
+</tr>
+<tr>
+<td>Rust + rustup</td>
+<td>Native library support</td>
+</tr>
+<tr>
+<td>Android NDK</td>
+<td>Compile Rust code for Android</td>
+</tr>
+<tr>
+<td>Visual Studio Code</td>
+<td>Recommended IDE</td>
+</tr>
+<tr>
+<td>Firebase Account</td>
+<td>Required for push notifications</td>
+</tr>
+</tbody>
+</table>
+<p>You can verify setup with <code>flutter doctor</code>.</p>
+<hr />
+<h2 id="3-project-setup-step-by-step">3. Project Setup (Step-by-Step)</h2>
+<h3 id="31-clone-the-repository">3.1 Clone the Repository</h3>
+<pre><code>git clone https://github.com/secluso/mobile_client.git  
+cd secluso
+</code></pre>
+<hr />
+<h3 id="32-open-the-project-in-visual-studio-code">3.2 Open the Project in Visual Studio Code</h3>
+<ul>
+<li>Launch Visual Studio Code</li>
+<li>Open the secluso/ folder  </li>
+<li>Install any recommended extensions (Flutter, Rust, Dart)</li>
+</ul>
+<hr />
+<h3 id="33-install-flutter-packages">3.3 Install Flutter Packages</h3>
+<pre><code>flutter pub get
+</code></pre>
+<hr />
+<h2 id="4-compile-rust-code-for-android">4. Compile Rust Code for Android</h2>
+<p>From the project root:</p>
+<pre><code>cd rust
+</code></pre>
+<p>Add Android build targets:</p>
+<pre><code>rustup target add aarch64-linux-android armv7-linux-androideabi i686-linux-android x86_64-linux-android
+</code></pre>
+<p>Build and export to the Android JNI directory:</p>
+<pre><code>cargo ndk -o ../android/app/src/main/jniLibs build
+</code></pre>
+<p>This will generate .so files for each architecture and place them in the appropriate folder.</p>
+<hr />
+<h2 id="5-run-on-a-physical-android-device">5. Run on a Physical Android Device</h2>
+<ol>
+<li>Plug in your Android device via USB</li>
+<li>Enable Developer Mode and USB Debugging</li>
+<li>Ensure the device is recognized in Visual Studio Code (bottom-right status bar)</li>
+<li>From the project root, run:</li>
+</ol>
+<pre><code>flutter run
+</code></pre>
+<p>This will build and launch the app on your connected device.</p>
+<hr />
+<h2 id="6-debugging-tips">6. Debugging Tips</h2>
+<table>
+<thead>
+<tr>
+<th>Problem</th>
+<th>Solution</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>App doesn’t update after <code>flutter run</code></td>
+<td>Run <code>flutter clean</code> first</td>
+</tr>
+<tr>
+<td>Rust compilation errors</td>
+<td>Ensure targets and NDK are properly set</td>
+</tr>
+</tbody>
+</table>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../../core/" class="btn btn-neutral float-left" title="core"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../structure/" class="btn btn-neutral float-right" title="Structure">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../../core/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../structure/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
