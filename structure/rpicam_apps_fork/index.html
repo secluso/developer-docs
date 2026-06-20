@@ -74,7 +74,13 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../logic/reset_toggle_ir/">Reset, Toggle, IR</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../logic/mls/">MLS (E2EE)</a>
+                  <li class="toctree-l1"><a class="reference internal" >MLS (E2EE)</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../logic/mls/general/">General</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../logic/mls/technical/">Technical</a>
+                </li>
+    </ul>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../logic/detection/">Motion + Object Detection</a>
                   </li>
@@ -135,6 +141,14 @@
             <div class="section" itemprop="articleBody">
               
                 <h1 id="rpicam-apps-fork-repository">rpicam-apps-fork repository</h1>
+<p>https://github.com/secluso/rpicam-apps-fork</p>
+<p>https://github.com/raspberrypi/rpicam-apps [v1.9.0]</p>
+<p>Unix Socket: /tmp/rpi_raw_frame_socket
+Accessed by: https://doc.rust-lang.org/std/os/unix/net/struct.UnixStream.html</p>
+<p>Modification of rpicam-apps: https://github.com/secluso/rpicam-apps-fork/commit/37356495ce7c3c49e44e45a7f1622f04373bacba
+Usage in rpi_dual_stream: 
+- Opening: https://github.com/secluso/core/blob/ae2069a305cbdd65048735971585c8376042a111/camera_hub/src/raspberry_pi/rpi_dual_stream.rs#L154
+- Reading: https://github.com/secluso/core/blob/ae2069a305cbdd65048735971585c8376042a111/camera_hub/src/raspberry_pi/rpi_dual_stream.rs#L129</p>
               
             </div>
           </div><footer>

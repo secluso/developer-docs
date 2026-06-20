@@ -45,6 +45,8 @@
               </ul>
               <ul class="current">
                 <li class="toctree-l1 current"><a class="reference internal current" href="#">Contributing</a>
+    <ul class="current">
+    </ul>
                 </li>
               </ul>
               <p class="caption"><span class="caption-text">Structure (Repos)</span></p>
@@ -72,7 +74,13 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../logic/reset_toggle_ir/">Reset, Toggle, IR</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../logic/mls/">MLS (E2EE)</a>
+                  <li class="toctree-l1"><a class="reference internal" >MLS (E2EE)</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../logic/mls/general/">General</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../logic/mls/technical/">Technical</a>
+                </li>
+    </ul>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../logic/detection/">Motion + Object Detection</a>
                   </li>
@@ -131,7 +139,17 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                
+                <h1 id="contributing">Contributing</h1>
+<p>We store all the current things we're working on in issues, namely:
+- https://github.com/secluso/core/issues
+- https://github.com/secluso/mobile_client/issues
+- https://github.com/secluso/os/issues</p>
+<p>If an issue does not have someone assigned, it is not currently being worked on. If it's something you want to work on, please send a message in there, and we'll assign it to you and give you some advice!</p>
+<p>You're also welcome to make an issue if you'd like to work on something else! Please make an issue and talk with us before starting on it.</p>
+<p>When you're finished, please make pull request(s) and reference the issue. A pull request should be &lt;1,000 LoC of changes. This is to keep changes minimal to aid with review and allow us to squash-and-merge the changes into a single commit on main.</p>
+<p>Before introducing new dependencies, please discuss with us. </p>
+<p>Before we accept a new pull request, you will need to sign a Contributor License Agreement (CLA). We use https://cla-assistant.io to automate this and use the same CLA as Bitwarden.</p>
+<p><strong>IMPORTANT: If you're contributing to a logical area (outside of user interfaces), we do not accept AI-generated code. You also must write your explanations/comments on GitHub without AI assistance.</strong></p>
               
             </div>
           </div><footer>
